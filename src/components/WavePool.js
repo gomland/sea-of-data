@@ -8,7 +8,7 @@ export default class WavePool extends Component {
         const {width, height} = this.props;
 
         return (
-            <div>
+            <div style={{position: "absolute", width: "100%", height: height, bottom: 0, overflow:"hidden"}}>
                 <Wave width={width} height={height} cnt={3} color={"#ff122b"} opacity={0.2} interval={35}/>
                 <Wave width={width} height={height} cnt={3} color={"#2dfa0c"} opacity={0.3} interval={60}/>
                 <Wave width={width} height={height} cnt={2} color={"#2034ef"} opacity={0.4} interval={45}/>

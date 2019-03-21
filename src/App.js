@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
+import {Card, Typography, Input, Button} from "antd";
 import "./App.css";
 import WavePool from "./components/WavePool";
 import TextRain from "./components/TextRain";
-import {Card, Typography, Input, Button} from "antd";
+import Space from "./components/Space";
 
-const WORDS = ["Test", "User Interface", "Keyword", "React", "Gomland", "Management", "Ant.Design", "BigData"];
+const WORDS = ["Test", "User Interface", "Keyword", "React", "gomland", "Management", "Ant.Design", "BigData"];
 
 export default class App extends Component {
     constructor(props) {
@@ -29,19 +30,28 @@ export default class App extends Component {
     render() {
         const {width, height, measureFinished} = this.state;
 
-        return (
-            <div style={{position: "absolute", width: "100%", height: "100%", background: "#01021e"}}
-                 ref={this.refCallback}>
-                <div style={{position: "absolute"}}>
-                    {
-                        measureFinished && <TextRain width={width} height={height} words={WORDS}/>
-                    }
+        if (!measureFinished) {
+            return (
+                <div style={{position: "absolute", width: "100%", height: "100%"}}
+                     ref={this.refCallback}>
                 </div>
+            );
+        }
+
+        return (
+            <div style={{position: "absolute", width: "100%", height: "100%", background: "#01021e"}}>
+                <Space width={width} height={height * 0.8} max={1000} opacity={0.3}/>
+                <Space width={width} height={height * 0.8} max={50} opacity={0.6} size={3} radialGradient animation/>
+                <Space width={width} height={height * 0.8} max={10} opacity={1} size={6} radialGradient animation/>
+                <TextRain width={width} height={height} words={WORDS} opacity={0.4}/>
+                <WavePool width={width} height={height * 0.35}/>
 
                 <div style={{display: "grid", gridTemplateColumns: "60% 40%"}}>
                     <div style={{marginTop: "25%", textAlign: "center"}}>
-                        <Typography style={{color: "#fff", fontSize: "5em", fontWeight: "bold"}}>React UI Test</Typography>
-                        <Typography style={{color: "#fff", fontSize: "2em",paddingTop:50}}>Created by gomland</Typography>
+                        <Typography style={{color: "#fff", fontSize: "5em", fontWeight: "bold"}}>React UI
+                            Test</Typography>
+                        <Typography style={{color: "#fff", fontSize: "2em", paddingTop: 50}}>Created by
+                            gomland</Typography>
                     </div>
                     <div>
                         <Card style={{width: "60%", marginTop: "30%"}}>
@@ -60,12 +70,6 @@ export default class App extends Component {
                             <Button type="primary" style={{width: "100%", height: 50, marginTop: 30}}>로그인</Button>
                         </Card>
                     </div>
-                </div>
-
-                <div style={{position: "absolute", width: "100%", height: 350, bottom: 0}}>
-                    {
-                        measureFinished && <WavePool width={width} height={350}/>
-                    }
                 </div>
             </div>
         );

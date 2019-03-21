@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { getRandomNumber, getRandomColor } from "./RandomTool";
+import {getRandomNumber, getRandomColor} from "./RandomTool";
 
 
 export default class TextRain extends Component {
@@ -38,8 +38,8 @@ export default class TextRain extends Component {
         const word = words[getRandomNumber(words.length)];
         const x = getRandomNumber(width);
         const fontSize = getRandomNumber(20) + 6;
-        const color = getRandomColor(0.35);
-        return [{x: x, y: -30, word: word, fontSize: fontSize, color: color}];
+        const color = getRandomColor(this.props.opacity ? this.props.opacity : 0.2);
+        return [{x: x, y: -100, word: word, fontSize: fontSize, color: color}];
     }
 
     moveItem = () => {
@@ -55,15 +55,11 @@ export default class TextRain extends Component {
         });
     }
 
-    getRandomNumber = (range) => {
-        return Math.floor(Math.random() * range);
-    }
-
     render() {
         const {width, height} = this.props;
 
         return (
-            <svg width={width} height={height}>
+            <svg width={width} height={height} style={{position: "absolute"}}>
                 {
                     this.state.items.map((item, index) => (
                         <g transform={`translate(${item.x},${item.y}) rotate(90)`} key={index}>

@@ -1,0 +1,161 @@
+.twinkle1 {
+    animation: twinkle-type-1 ease 5s infinite;
+    -webkit-animation: twinkle-type-1 ease 5s infinite;
+    -moz-animation: twinkle-type-1 ease 5s infinite;
+    -o-animation: twinkle-type-1 ease 5s infinite;
+    -ms-animation: twinkle-type-1 ease 5s infinite;
+}
+
+
+.twinkle2 {
+    animation: twinkle-type-2 ease 3s infinite;
+    -webkit-animation: twinkle-type-2 ease 3s infinite;
+    -moz-animation: twinkle-type-2 ease 3s infinite;
+    -o-animation: twinkle-type-2 ease 3s infinite;
+    -ms-animation: twinkle-type-2 ease 3s infinite;
+}
+
+.twinkle3 {
+    animation: twinkle-type-2 ease 4s infinite;
+    -webkit-animation: twinkle-type-2 ease 4s infinite;
+    -moz-animation: twinkle-type-2 ease 4s infinite;
+    -o-animation: twinkle-type-2 ease 4s infinite;
+    -ms-animation: twinkle-type-2 ease 4s infinite;
+}
+
+.twinkle4 {
+    animation: twinkle-type-2 ease 2s infinite;
+    -webkit-animation: twinkle-type-2 ease 2s infinite;
+    -moz-animation: twinkle-type-2 ease 4s infinite;
+    -o-animation: twinkle-type-2 ease 2s infinite;
+    -ms-animation: twinkle-type-2 ease 2s infinite;
+}
+
+.twinkle5 {
+    animation: twinkle-type-1 ease 1.5s infinite;
+    -webkit-animation: twinkle-type-1 ease 1.5s infinite;
+    -moz-animation: twinkle-type-1 ease 1.5s infinite;
+    -o-animation: twinkle-type-1 ease 1.5s infinite;
+    -ms-animation: twinkle-type-1 ease 1.5s infinite;
+}
+
+@keyframes twinkle-type-1{
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+@-moz-keyframes twinkle-type-1 {
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+@-webkit-keyframes twinkle-type-1 {
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+@-o-keyframes twinkle-type-1 {
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+@-ms-keyframes twinkle-type-1 {
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+@keyframes twinkle-type-2{
+    0% {
+        opacity:0.4;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        opacity:0.4;
+    }
+}
+
+@-moz-keyframes twinkle-type-2{
+    0% {
+        opacity:0.4;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        opacity:0.4;
+    }
+}
+
+@-webkit-keyframes twinkle-type-2{
+    0% {
+        opacity:0.4;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        opacity:0.4;
+    }
+}
+
+@-o-keyframes twinkle-type-2{
+    0% {
+        opacity:0.4;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        opacity:0.4;
+    }
+}
+
+@-ms-keyframes twinkle-type-2{
+    0% {
+        opacity:0.4;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        opacity:0.4;
+    }
+}
+
